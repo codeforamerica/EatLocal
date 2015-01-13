@@ -1,5 +1,3 @@
-/*This for the ui.bootstrap to work*/
-.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
 
 /* Space out content a bit */
 body {
@@ -78,3 +76,7 @@ body {
   }
 
 }
+
+
+/*This for the ui.bootstrap to work*/
+.nav, .pagination, .carousel, .panel-title a { cursor: pointer; }
