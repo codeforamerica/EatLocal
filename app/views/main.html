@@ -1,17 +1,43 @@
-<div class="jumbotron">
-  <h1>Hola!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">EatLocal</a>
+    </div>
 
-<div class="row marketing">
-  <h4>Restaurants</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
+  </div>
+</nav>
+<br>
+<div class="container-fluid">
+  <div class="row">
+    <!-- <div class="col-sm-3 col-md-2 sidebar"> -->
+    <div class="col-md-5">
+      <br>
+      <div>
+        <accordion close-others="true">
+          <accordion-group heading="Farms" is-open="true" is-disabled="status.isFirstDisabled">
+            This content is straight in the template.
+          </accordion-group>
+          <accordion-group heading="Restaurants">
+            HOla hola
+          </accordion-group>
+          <accordion-group heading="Markets">
+            <p>The body of the accordion group grows to fit the contents</p>
+          </accordion-group>
+        </accordion>
+      </div>
 
+    </div>
+    <!-- <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main"> -->
+    <div class="col-md-7">
 
+      <img src="http://placekitten.com/g/610/700" alt="Map Area" />
+
+    </div>
+  </div>
 </div>
