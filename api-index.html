@@ -5,8 +5,23 @@
   <body>
     <div>
       <h1>File Downloads</h1>
-      <a href="">File to go here</a>
+      <a href="https://docs.google.com/a/codeforamerica.org/spreadsheets/d/1_lF5WrE_JhgqxeqRJZm2wQAaM-C_Bz-oUOkHHq6vhYk/export?format=csv">CSV Format</a>
+      <a href="#" id="json-file-download">JSON Format</a>
+      <h1>URL access to JSON data</h1>
+      <ul>
+        <li>EatLocal/api/&lt;type&gt; will return the json for all rows in the dataset matching &lt;type&gt;</li>
+      </ul>
+      <h2>Valid &lt;type&gt; Values</h2>
+      <ul>
+        <li><b>All</b> - all rows in the dataset, this is the same as the content of the json file download</li>
+        <li><b>Agritourism</b> - only rows in the dataset that represent agritourism-related vendors</li>
+        <li><b>CSA</b> - only rows in the dataset that represent community supported agriculture vendors</li>
+        <li><b>Farmers Market</b> - only rows in the dataset that represent farmers' markets</li>
+        <li><b>Restaurant</b> - only rows in the dataset that represent restaurants</li>
+        <li><b>Winery</b> - only rows in the dataset that represent wineries</li>
+      </ul>
     </div>
-    <script src="assets/js/api.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="assets/js/api.js"></script>
   </body>
 </html>
