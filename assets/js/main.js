@@ -98,6 +98,7 @@ var theaters = L.geoJson(null, {
   }
 });
 $.getJSON("data/DOITT_THEATER_01_13SEPT2010.geojson", function (data) {
+  console.log(JSON.stringify(data));
   theaters.addData(data);
 });
 
