@@ -50,8 +50,19 @@
             <input type="text" class="form-control search" placeholder="Filter" ng-model="search" />
             <ul>
                 <li ng-repeat="color in colors | filter:search">
-                  <a href="#">{{color}}</a>
-                  <p>aklfdj afjda fdaf d</p>
+                  <div class="row">
+                    <div class="col-md-3">
+                      <img src="http://placehold.it/100x100" alt="" />
+                    </div>
+                    <div class="col-md-9">
+                      <a href="#" class="title">{{color}}</a><br>
+                      <span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span><br>
+                      <span class="address">155 9th Street, San Francisco, CA 94104</span>
+                      <span class="phone">555-555-1234</span>
+                    </div>
+                  </div>
+
+
                 </li>
             </ul>
 
