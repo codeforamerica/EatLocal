@@ -25,6 +25,12 @@ input[type="radio"], input[type="checkbox"] {
 .table {
   margin-bottom: 0px;
 }
+.navbar {
+  background-color: slategray;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: white;
+}
 .navbar .navbar-brand {
   font-weight: bold;
   font-size: 25px;
