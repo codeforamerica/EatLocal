@@ -49,16 +49,16 @@
             <h3>hola hola</h3>
             <input type="text" class="form-control search" placeholder="Filter" ng-model="search" />
             <ul>
-                <li ng-repeat="color in colors | filter:search">
+                <li ng-repeat="place in places | filter:search">
                   <div class="row">
                     <div class="col-md-3">
-                      <img src="http://placehold.it/100x100" alt="" />
+                      <img ng-src="{{place.image}}" alt="" />
                     </div>
                     <div class="col-md-9">
-                      <a href="#" class="title">{{color}}</a><br>
-                      <span class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</span><br>
-                      <span class="address">155 9th Street, San Francisco, CA 94104</span>
-                      <span class="phone">555-555-1234</span>
+                      <a href="#" class="title">{{place.name}}</a><br>
+                      <span class="description">{{place.description}}</span><br>
+                      <span class="address">{{place.address}}</span>
+                      <span class="phone">{{place.phone}}</span>
                     </div>
                   </div>
 
