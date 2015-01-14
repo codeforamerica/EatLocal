@@ -204,7 +204,7 @@ var overlays = {
 };
 
 var layerControl = L.control.layers(overlays, {
-  collapsed: isCollapsed
+//  collapsed: isCollapsed
 }).addTo(map);
 
 /* Add overlay layers to map after defining layer control to preserver order */
