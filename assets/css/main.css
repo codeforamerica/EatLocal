@@ -28,7 +28,7 @@ input[type="radio"], input[type="checkbox"] {
   margin-bottom: 0px;
 }
 .navbar {
-  background-color: slategray;
+  background-color: #2b518e;
 }
 .navbar-inverse .navbar-nav > li > a {
   color: white;
