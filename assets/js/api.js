@@ -1,5 +1,5 @@
 (function() {
-  use strict;
+  'use strict';
   var data,
     handleQueryResponse = function(response) {
       console.log('in response handler');
@@ -12,5 +12,5 @@
       query.send(handleQueryResponse);
     };
   console.lot('stuff was defined');
-  getData("https://docs.google.com/a/codeforamerica.org/spreadsheets/d/1_lF5WrE_JhgqxeqRJZm2wQAaM-C_Bz-oUOkHHq6vhYk");
+  getData('https://docs.google.com/a/codeforamerica.org/spreadsheets/d/1_lF5WrE_JhgqxeqRJZm2wQAaM-C_Bz-oUOkHHq6vhYk');
 }());
