@@ -26,7 +26,7 @@
     <![endif]-->
   </head>
 
-  <body ng-app="EatLocal">
+  <body ng-app="EatLocal" ng-controller="MainCtrl">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -46,15 +46,15 @@
 
     <div id="sidebar">
       <div class="sidebar-wrapper">
-          <div class="panel-body">
-            <p>
-              <div class="row">
-                <div class="col-xs-12 col-md-12">
-                  <input type="text" class="form-control search" placeholder="Filter" />
-                </div>
-              </div>
-            </p>
-          </div>
+            <h3>hola hola</h3>
+            <input type="text" class="form-control search" placeholder="Filter" ng-model="search" />
+            <ul>
+                <li ng-repeat="color in colors | filter:search">
+                  <a href="#">{{color}}</a>
+                  <p>aklfdj afjda fdaf d</p>
+                </li>
+            </ul>
+
         </div>
     </div>
 

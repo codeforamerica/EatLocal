@@ -101,6 +101,25 @@ input[type="radio"], input[type="checkbox"] {
   top: 5px;
   background: transparent;
 }
+
+/*sidebar styles*/
+div#sidebar.leaflet-control {
+  padding: 10px 10px;
+}
+
+#sidebar li {
+  list-style: none;
+  padding: 10px 10px 10px 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+#sidebar ul {
+  margin-left: -35px;
+}
+#sidebar .form-control.search {
+
+}
+
 @media (max-width: 992px) {
   .navbar .navbar-brand {
     font-size: 18px;
