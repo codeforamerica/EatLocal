@@ -152,10 +152,10 @@ var museums = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<table class='table table-striped table-bordered table-condensed'>"
-        + "<tr><th>Name</th><td>" + feature.properties.NAME + "</td></tr>"
-        + "<tr><th>Address</th><td>" + feature.properties.ADDRESS1 + "</td></tr>"
-        + "<tr><th>Description</th><td>" + feature.properties.DESCRIPTION + "</td></tr>" + "</table>";
+      var content = "<div class='row map-popup'><div class='col-md-9'>"
+        + "<span class='title'><strong>" + feature.properties.NAME + "</strong></span>"
+        + "<br><span class='description'>" + feature.properties.DESCRIPTION + "</span>"
+        + "<br><span class='address'>" + feature.properties.ADDRESS1 + "</span>" + "</div></div>";
       if (document.body.clientWidth <= 767) {
         layer.on({
           click: function (e) {
