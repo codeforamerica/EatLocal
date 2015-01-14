@@ -11,6 +11,6 @@
       var query = new google.visualization.Query(URL);
       query.send(handleQueryResponse);
     };
-  console.lot('stuff was defined');
+  console.log('stuff was defined');
   getData('https://docs.google.com/a/codeforamerica.org/spreadsheets/d/1_lF5WrE_JhgqxeqRJZm2wQAaM-C_Bz-oUOkHHq6vhYk');
 }());
