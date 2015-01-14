@@ -95,7 +95,7 @@ var theaters = L.geoJson(null, {
         iconUrl: "assets/img/restaurants.png",
         iconSize: [27, 45],
         iconAnchor: [12, 28],
-        popupAnchor: [0, -25]
+        popupAnchor: [0, -27]
       }),
       title: feature.properties.NAME,
       riseOnHover: true
@@ -141,10 +141,10 @@ var museums = L.geoJson(null, {
   pointToLayer: function (feature, latlng) {
     return L.marker(latlng, {
       icon: L.icon({
-        iconUrl: "assets/img/museum.png",
-        iconSize: [24, 28],
+        iconUrl: "assets/img/farmersmarkets.png",
+        iconSize: [27, 45],
         iconAnchor: [12, 28],
-        popupAnchor: [0, -25]
+        popupAnchor: [0, -27]
       }),
       title: feature.properties.NAME,
       riseOnHover: true
@@ -200,7 +200,7 @@ if (document.body.clientWidth <= 767) {
 
 var overlays = {
   "<img src='assets/img/restaurants.png' width='27' height='45'>&nbsp;Restaurants": theaters,
-  "<img src='assets/img/museum.png' width='24' height='28'>&nbsp;Farmers Market": museums
+  "<img src='assets/img/farmersmarkets.png' width='27' height='45'>&nbsp;Farmers Market": museums
 };
 
 var layerControl = L.control.layers(overlays, {
