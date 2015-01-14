@@ -1,6 +1,41 @@
 var map,
     theaterSearch = [],
-    museumSearch = [];
+    museumSearch = [],
+    // typeFilter - optional string type on which to limit data being transformed and returned
+    // returns a valid geojson given data input from RUCS (not currently aligned to any standard)
+    rucsToGeojson = function(data, typeFilter) {
+    // Transform RUCS data into valid geojson
+      var placeCount = 0,
+        numPlaces = data.length,
+        geoJsonData = {
+          type: 'FeatureCollection',
+          features: []
+        };
+      for (var i = 0; i < numPlaces; i++) {
+        var place = data[i];
+        if (place.Type === typeFilter) {
+          geoJsonData.features[placeCount] = {
+            type: 'Feature',
+            id: placeCount,
+            properties: {
+              NAME: place.Name,
+              TEL: null,
+              URL: null,
+              ADDRESS1: place["Street Address"],
+              ADDRES2: null,
+              CITY: place.City,
+              ZIP: place.Zip
+            },
+            geometry: {
+              type: 'Point',
+              coordinates: [place.Latitude, place.Longitude]
+            }
+          };
+          placeCount++;
+        }
+      }
+      return geoJsonData;
+    };
 
 /* Basemap Layers */
 var mapquestOSM = L.tileLayer("http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png", {
@@ -21,12 +56,6 @@ var boroughs = L.geoJson(null, {
     };
   },
   onEachFeature: function (feature, layer) {
-    boroughSearch.push({
-      name: layer.feature.properties.BoroName,
-      source: "Boroughs",
-      id: L.stamp(layer),
-      bounds: layer.getBounds()
-    });
   }
 });
 $.getJSON("data/boroughs.geojson", function (data) {
@@ -103,8 +132,8 @@ var theaters = L.geoJson(null, {
     }
   }
 });
-$.getJSON("data/DOITT_THEATER_01_13SEPT2010.geojson", function (data) {
-  theaters.addData(data);
+$.getJSON("data/LocalFoodPlaces.json", function (data) {
+  theaters.addData(rucsToGeojson(data, "Restaurants"));
 });
 
 var museums = L.geoJson(null, {
@@ -148,8 +177,8 @@ var museums = L.geoJson(null, {
     }
   }
 });
-$.getJSON("data/DOITT_MUSEUM_01_13SEPT2010.geojson", function (data) {
-  museums.addData(data);
+$.getJSON("data/LocalFoodPlaces.json", function (data) {
+  museums.addData(rucsToGeojson(data, "Farmers Market"));
 });
 
 map = L.map("map", {
