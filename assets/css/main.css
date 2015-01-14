@@ -2,6 +2,8 @@ html, body, #map {
   height: 100%;
   width: 100%;
   overflow: hidden;
+  font-family: 'Signika', sans-serif;
+  font-weight: 300;
 }
 body {
   padding-top: 50px;
