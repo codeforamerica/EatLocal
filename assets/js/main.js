@@ -188,7 +188,7 @@ $.getJSON("data/LocalFoodPlaces.json", function (data) {
 map = L.map("map", {
   zoom: 15,
   center: [38.57888, -121.491408],
-  layers: [mapquestOSM]
+  layers: [mapquestOSM, theaters]
 });
 
 /* Larger screens get expanded layer control */
