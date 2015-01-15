@@ -11,6 +11,7 @@
 	  	var originalCallback = window.awfulHackCallback;
 	  	window.awfulHackCallback = function() {
 	      $scope.places = window.awfulHackDataStore;
+	      $scope.$digest();
 	  	  if (originalCallback) {
 	  	    originalCallback();
 	  	  }
