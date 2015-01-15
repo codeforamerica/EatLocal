@@ -59,13 +59,13 @@
                 <li ng-repeat="place in places | filter:search">
                   <div class="row">
                     <div class="col-md-3">
-                      <img ng-src="{{place.image}}" alt="" />
+                      <img src="assets/img/yosemite.png" alt="" />
                     </div>
                     <div class="col-md-9">
-                      <a href="#" class="title"><strong>{{place.name}}</strong></a><br>
-                      <span class="description">{{place.description}}</span><br>
-                      <span class="address">{{place.address}}</span>
-                      <span class="phone">{{place.phone}}</span>
+                      <a href="#" class="title"><strong>{{place["Name"]}}</strong></a><br>
+                      <span class="description">{{place["Description"]}}</span><br>
+                      <span class="address">{{place["Street Address"] }} {{place["City"] + " " + place["City"] + " " + place["State"] + " " + place["Zip"]}}</span><br>
+                      <span class="phone">{{place["Phone"]}}</span>
                     </div>
                   </div>
 

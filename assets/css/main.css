@@ -127,8 +127,13 @@ div#sidebar.leaflet-control {
   color: #666;
 }
 
+#sidebar img {
+  width: 100px;
+}
+
 #sidebar .address, .map-popup .address {
   color: #ccc;
+  font-size: 12px;
 }
 
 @media (max-width: 992px) {
