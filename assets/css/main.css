@@ -103,9 +103,13 @@ input[type="radio"], input[type="checkbox"] {
   top: 11px;
   background: transparent;
 }
-.about-link {margin-right: 10px !important;}
+
+.about-link a {
+  margin-right: 10px !important;
+  color: #d0ecdb;}
+
 .header-tagline {
-  color: #d0ecdb;
+  color: white;
   padding: 19px 0px 0px 0px;}
 
 /*sidebar styles*/
@@ -135,6 +139,10 @@ div#sidebar.leaflet-control {
   color: #ccc;
   font-size: 12px;
 }
+
+.search-icon {font-size: 20px;}
+
+.website-title {padding: 15px 15px 0px 0px}
 
 @media (max-width: 992px) {
   .navbar .navbar-brand {
