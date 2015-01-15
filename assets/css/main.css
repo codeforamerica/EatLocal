@@ -156,6 +156,8 @@ div#sidebar.leaflet-control {
   padding: 10px 20px;
 }
 
+.map-popup {margin: 0px;}
+
 .search-icon {font-size: 20px;}
 
 .website-title {padding: 15px 15px 0px 0px}
