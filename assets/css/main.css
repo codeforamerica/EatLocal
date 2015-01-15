@@ -132,8 +132,8 @@ div#sidebar.leaflet-control {
 }
 
 #sidebar img {
-  width: 100%;
-  margin-top: 10px;
+  width: 125%;
+  margin-top: 5px;
 }
 
 #sidebar .address, .map-popup .address {
@@ -159,6 +159,56 @@ div#sidebar.leaflet-control {
 .search-icon {font-size: 20px;}
 
 .website-title {padding: 15px 15px 0px 0px}
+
+/*MEDIA QUERIES*/
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+
+  /*sidebar styles*/
+  div#sidebar.leaflet-control {
+    padding: 10px 30px 10px 10px;
+  }
+
+  #sidebar li {
+    list-style: none;
+    padding: 15px 0px;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  #sidebar ul {
+    margin-left: -35px;
+  }
+
+  #sidebar .phone {
+    color: #666;
+  }
+
+  #sidebar img {
+    width: 50px;
+    margin-top: 5px;
+  }
+
+  #sidebar .address, .map-popup .address {
+    color: #ccc;
+    font-size: 12px;
+  }
+
+  #sidebar .col-md-3 {
+    position: relative;
+    float: left;
+    width: 20%;
+  }
+
+  #sidebar .col-md-9 {
+    position: relative;
+    float: left;
+    width: 80%;
+  }
+
+}
+
 
 @media (max-width: 992px) {
   .navbar .navbar-brand {
