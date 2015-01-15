@@ -101,6 +101,10 @@ input[type="radio"], input[type="checkbox"] {
   top: 5px;
   background: transparent;
 }
+.about-link {margin-right: 10px !important;}
+.header-tagline {
+  color: white;
+  padding: 19px 0px 0px 0px;}
 
 /*sidebar styles*/
 div#sidebar.leaflet-control {
