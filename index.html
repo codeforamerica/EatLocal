@@ -45,8 +45,8 @@
 
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right about-link">
-          <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#contributeModal').modal('show'); return false;">&nbsp;&nbsp;Contribute</a></li>
-          <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#aboutModal').modal('show'); return false;"><i class="fa fa-question-circle" style="color: #d0ecdb"></i>&nbsp;&nbsp;About</a></li>
+          <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#contributeModal').modal('show'); return false;"><i class="fa fa-code" style="color: #d0ecdb"></i>&nbsp;&nbsp;Contribute</a></li>
+          <li><a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" onclick="$('#aboutModal').modal('show'); return false;"><i class="fa fa-info-circle" style="color: #d0ecdb"></i>&nbsp;&nbsp;About</a></li>
         </ul>
       </div><!--/.navbar-collapse -->
     </div>
@@ -134,7 +134,20 @@
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->
 
-
+    <div class="modal fade" id="featureModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title text-primary" id="feature-title"></h4>
+          </div>
+          <div class="modal-body" id="feature-info"></div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
 
 
