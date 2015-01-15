@@ -140,6 +140,21 @@ div#sidebar.leaflet-control {
   font-size: 12px;
 }
 
+#aboutModal img {
+  width: 100px;
+}
+
+#aboutModal ul {
+  text-align: center;
+  margin-left: -41px;
+}
+
+#aboutModal li {
+  list-style: none;
+  display: inline;
+  padding: 10px 20px;
+}
+
 .search-icon {font-size: 20px;}
 
 .website-title {padding: 15px 15px 0px 0px}
