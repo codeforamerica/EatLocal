@@ -60,7 +60,7 @@ var theaters = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<div class='row map-popup'><div class='col-md-9'>"
+      var content = "<div class='row map-popup'><div>"
         + "<span class='title'><strong>" + feature.properties.NAME + "</strong></a>"
         + "<br><span class='description'>" + feature.properties.DESCRIPTION + "</span>"
         + "<br><span class='address'>" + feature.properties.ADDRESS1 + "</span>" + "</div></div>";
@@ -109,7 +109,7 @@ var farmersMarkets = L.geoJson(null, {
   },
   onEachFeature: function (feature, layer) {
     if (feature.properties) {
-      var content = "<div class='row map-popup'><div class='col-md-9'>"
+      var content = "<div class='row map-popup'><div>"
         + "<span class='title'><strong>" + feature.properties.NAME + "</strong></span>"
         + "<br><span class='description'>" + feature.properties.DESCRIPTION + "</span>"
         + "<br><span class='address'>" + feature.properties.ADDRESS1 + "</span>" + "</div></div>";
