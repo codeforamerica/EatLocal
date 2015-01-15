@@ -30,6 +30,7 @@ input[type="radio"], input[type="checkbox"] {
 .navbar {
   background-color: #1fbc70;
   border: 0;
+  border-bottom: 4px solid #02726c;
 }
 .navbar-inverse .navbar-nav > li > a {
   color: white;
