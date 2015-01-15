@@ -98,8 +98,9 @@ input[type="radio"], input[type="checkbox"] {
   z-index: 1020;
 }
 .leaflet-sidebar .close {
+  font-size: 30px;
   right: 0px;
-  top: 5px;
+  top: 11px;
   background: transparent;
 }
 .about-link {margin-right: 10px !important;}
@@ -109,7 +110,7 @@ input[type="radio"], input[type="checkbox"] {
 
 /*sidebar styles*/
 div#sidebar.leaflet-control {
-  padding: 10px 10px;
+  padding: 10px 30px 10px 10px;
 }
 
 #sidebar li {
