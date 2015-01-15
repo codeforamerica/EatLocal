@@ -43,6 +43,11 @@ input[type="radio"], input[type="checkbox"] {
 .navbar-collapse.in {
   overflow-y: hidden;
 }
+
+.navbar-inverse .navbar-toggle {
+  border: none;
+}
+
 .typeahead {
   background-color: #FFFFFF;
 }
@@ -207,6 +212,10 @@ and (max-device-width : 480px) {
     position: relative;
     float: left;
     width: 80%;
+  }
+
+  .website-title {
+    padding-left: 23%;
   }
 
 }
