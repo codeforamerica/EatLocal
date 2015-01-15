@@ -22,20 +22,28 @@
         }
         jsonData[i] = rowEntry;
       }
-      var jsonDownloadAnchorElement = document.getElementById('json-file-download'),
-        oldListener = jsonDownloadAnchorElement.onclick;
-      jsonDownloadAnchorElement.onclick = function() {
-        var uri = 'data:text/csv;charset=utf-8,' + encodeURIComponent(JSON.stringify(jsonData)),
-          downloadLink = document.createElement("a");
-        downloadLink.href = uri;
-        downloadLink.download = "LocalFoodPlaces.json";
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-        if (oldListener) {
-          oldListener();
+      var jsonDownloadAnchorElement = document.getElementById('json-file-download');
+      if (jsonDownloadAnchorElement) {
+        var oldListener = jsonDownloadAnchorElement.onclick;
+        jsonDownloadAnchorElement.onclick = function() {
+          var uri = 'data:text/csv;charset=utf-8,' + encodeURIComponent(JSON.stringify(jsonData)),
+            downloadLink = document.createElement("a");
+          downloadLink.href = uri;
+          downloadLink.download = "LocalFoodPlaces.json";
+          document.body.appendChild(downloadLink);
+          downloadLink.click();
+          document.body.removeChild(downloadLink);
+          if (oldListener) {
+            oldListener();
+          }
+        };
+      } else {
+        // This is an awful hack because we have no server to get the updated data for the api
+        window.awfulHackDataStore = jsonData;
+        if (window.awfulHackCallback) {
+          window.awfulHackCallback();
         }
-      };
+      }
     },
     getData = function(URL) {
       var query = new google.visualization.Query(URL);
@@ -47,4 +55,9 @@
   google.setOnLoadCallback(onLoadCallbackFunction);
   // Load the Visualization API.
   google.load('visualization', '1.0', {});
+  window.awfulHackDynamicApiLoad = function() {
+    google.setOnLoadCallback(onLoadCallbackFunction);
+    // Load the Visualization API.
+    google.load('visualization', '1.0', {});
+  };
 }());
