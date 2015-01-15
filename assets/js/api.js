@@ -56,6 +56,9 @@
   // Load the Visualization API.
   google.load('visualization', '1.0', {});
   window.awfulHackDynamicApiLoad = function() {
+    if (window.awfulHackDataStore) {
+      return;
+    }
     google.setOnLoadCallback(onLoadCallbackFunction);
     // Load the Visualization API.
     google.load('visualization', '1.0', {});
