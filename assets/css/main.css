@@ -132,7 +132,8 @@ div#sidebar.leaflet-control {
 }
 
 #sidebar img {
-  width: 100px;
+  width: 100%;
+  margin-top: 10px;
 }
 
 #sidebar .address, .map-popup .address {
