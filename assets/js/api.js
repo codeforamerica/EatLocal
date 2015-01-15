@@ -1,9 +1,41 @@
 (function() {
   'use strict';
-  var data,
+  var data = null,
     handleQueryResponse = function(response) {
       data = response.getDataTable();
-      console.log(data);
+      var rowCount = data.Nf.length,
+        columnCount = data.Pf.length,
+        rowProperties = [],
+        jsonData = [];
+      for (var i = 0; i < columnCount; i++) {
+        rowProperties[i] = data.Pf[i].label;
+      }
+      for (var i = 0; i < rowCount; i++) {
+        var rowEntry = {};
+        for (var j = 0; j < columnCount; j++) {
+          var columnEntry = data.Nf[i].c[j];
+          if (columnEntry !== null) {
+            rowEntry[rowProperties[j]] = data.Nf[i].c[j].v;
+          } else {
+            rowEntry[rowProperties[j]] = '';
+          }
+        }
+        jsonData[i] = rowEntry;
+      }
+      var jsonDownloadAnchorElement = document.getElementById('json-file-download'),
+        oldListener = jsonDownloadAnchorElement.onclick;
+      jsonDownloadAnchorElement.onclick = function() {
+        var uri = 'data:text/csv;charset=utf-8,' + encodeURIComponent(JSON.stringify(jsonData)),
+          downloadLink = document.createElement("a");
+        downloadLink.href = uri;
+        downloadLink.download = "LocalFoodPlaces.json";
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+        if (oldListener) {
+          oldListener();
+        }
+      };
     },
     getData = function(URL) {
       var query = new google.visualization.Query(URL);
