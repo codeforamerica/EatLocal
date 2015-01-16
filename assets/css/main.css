@@ -142,7 +142,7 @@ div#sidebar.leaflet-control {
 }
 
 #sidebar .address, .map-popup .address {
-  color: #ccc;
+  color: #999595;
   font-size: 12px;
 }
 
@@ -198,7 +198,7 @@ and (max-device-width : 480px) {
   }
 
   #sidebar .address, .map-popup .address {
-    color: #ccc;
+    color: #999595;
     font-size: 12px;
   }
 

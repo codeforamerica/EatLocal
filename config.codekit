@@ -564,24 +564,13 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
-	"\/assets\/img\/agritourism-kids.png": {
+	"\/assets\/img\/agritourism.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 473554,
-		"inputAbbreviatedPath": "\/assets\/img\/agritourism-kids.png",
-		"outputAbbreviatedPath": "\/assets\/img\/agritourism-kids.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/img\/agriturism.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 181253,
-		"inputAbbreviatedPath": "\/assets\/img\/agriturism.png",
-		"outputAbbreviatedPath": "\/assets\/img\/agriturism.png",
+		"initialSize": 470252,
+		"inputAbbreviatedPath": "\/assets\/img\/agritourism.png",
+		"outputAbbreviatedPath": "\/assets\/img\/agritourism.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -593,6 +582,17 @@
 		"initialSize": 189229,
 		"inputAbbreviatedPath": "\/assets\/img\/barn.png",
 		"outputAbbreviatedPath": "\/assets\/img\/barn.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/csa.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.35688e+06,
+		"inputAbbreviatedPath": "\/assets\/img\/csa.png",
+		"outputAbbreviatedPath": "\/assets\/img\/csa.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -619,17 +619,6 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/farmersmarkets.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2628,
-		"inputAbbreviatedPath": "\/assets\/img\/farmersmarkets.png",
-		"outputAbbreviatedPath": "\/assets\/img\/farmersmarkets.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
 	"\/assets\/img\/favicon-196.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -648,17 +637,6 @@
 		"initialSize": 654572,
 		"inputAbbreviatedPath": "\/assets\/img\/groceries.png",
 		"outputAbbreviatedPath": "\/assets\/img\/groceries.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/img\/grocery.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 2659,
-		"inputAbbreviatedPath": "\/assets\/img\/grocery.png",
-		"outputAbbreviatedPath": "\/assets\/img\/grocery.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -938,13 +916,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/restaurants.png": {
+	"\/assets\/img\/wineries.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 2293,
-		"inputAbbreviatedPath": "\/assets\/img\/restaurants.png",
-		"outputAbbreviatedPath": "\/assets\/img\/restaurants.png",
+		"inputAbbreviatedPath": "\/assets\/img\/wineries.png",
+		"outputAbbreviatedPath": "\/assets\/img\/wineries.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -956,17 +934,6 @@
 		"initialSize": 1.24998e+06,
 		"inputAbbreviatedPath": "\/assets\/img\/winery.png",
 		"outputAbbreviatedPath": "\/assets\/img\/winery.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/img\/yosemite.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 80172,
-		"inputAbbreviatedPath": "\/assets\/img\/yosemite.png",
-		"outputAbbreviatedPath": "\/assets\/img\/yosemite.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
