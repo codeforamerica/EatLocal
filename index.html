@@ -58,9 +58,12 @@
                 <li ng-repeat="place in places | filter:search">
                   <div class="row">
                     <div class="col-md-3">
-                      <img ng-show='place["Type"] === "Farmers Market"' src="assets/img/farm.png" alt="" />
+                      <img ng-show='place["Type"] === "Farmers Market"' src="assets/img/farmersmarket.png" alt="" />
                       <img ng-show='place["Type"] === "Restaurant"' src="assets/img/rest.png" alt="" />
                       <img ng-show='place["Type"] === "Grocery Store"' src="assets/img/groceries.png" alt="" />
+                      <img ng-show='place["Type"] === "Winery"' src="assets/img/winery.png" alt="" />
+                      <img ng-show='place["Type"] === "Agritourism"' src="assets/img/agritourism.png" alt="" />
+                      <img ng-show='place["Type"] === "CSA"' src="assets/img/csa.png" alt="" />
                     </div>
                     <div class="col-md-9">
                       <a href="#" class="title" ng-click="jumpMapTo(place)"><strong>{{place["Name"]}}</strong></a><br>
