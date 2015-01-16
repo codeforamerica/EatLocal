@@ -11,17 +11,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/app\/eatlocal.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/app\/eatlocal.js",
-		"outputAbbreviatedPath": "\/app\/min\/eatlocal-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
 	"\/assets\/bootstrap-3.1.1\/css\/bootstrap-theme.css": {
 		"fileType": 16,
 		"ignore": 0,
@@ -652,6 +641,270 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/assets\/img\/icons\/ic_19x19.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 682,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/ic_19x19.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/ic_19x19.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/ic_24x24.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 836,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/ic_24x24.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/ic_24x24.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/ic_25x25.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 865,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/ic_25x25.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/ic_25x25.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/ic_32x32.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1033,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/ic_32x32.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/ic_32x32.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/ic_36x36.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1191,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/ic_36x36.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/ic_36x36.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/ic_38x38.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1250,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/ic_38x38.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/ic_38x38.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/ic_48x48.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1579,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/ic_48x48.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/ic_48x48.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/ic_72x72.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2310,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/ic_72x72.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/ic_72x72.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/Icon-72.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2310,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/Icon-72.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/Icon-72.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/Icon-72@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5014,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/Icon-72@2x.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/Icon-72@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/Icon-Small-50.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1659,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/Icon-Small-50.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/Icon-Small-50.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/Icon-Small-50@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3320,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/Icon-Small-50@2x.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/Icon-Small-50@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/Icon-Small.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 944,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/Icon-Small.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/Icon-Small.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/Icon-Small@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1907,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/Icon-Small@2x.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/Icon-Small@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/Icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1893,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/Icon.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/Icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/Icon@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3723,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/Icon@2x.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/Icon@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/ios7_app_icon_ipad.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2434,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/ios7_app_icon_ipad.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/ios7_app_icon_ipad.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/ios7_app_icon_ipad@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 5371,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/ios7_app_icon_ipad@2x.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/ios7_app_icon_ipad@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/ios7_app_icon_iphone.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1920,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/ios7_app_icon_iphone.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/ios7_app_icon_iphone.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/ios7_app_icon_iphone@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 3997,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/ios7_app_icon_iphone@2x.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/ios7_app_icon_iphone@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/ios7_settings_icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 944,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/ios7_settings_icon.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/ios7_settings_icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/ios7_settings_icon@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1907,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/ios7_settings_icon@2x.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/ios7_settings_icon@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/ios7_spotlight_icon.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1340,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/ios7_spotlight_icon.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/ios7_spotlight_icon.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/icons\/ios7_spotlight_icon@2x.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 2626,
+		"inputAbbreviatedPath": "\/assets\/img\/icons\/ios7_spotlight_icon@2x.png",
+		"outputAbbreviatedPath": "\/assets\/img\/icons\/ios7_spotlight_icon@2x.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/rest.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -724,17 +977,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/js\/jquery-1.11.0.min.js",
 		"outputAbbreviatedPath": "\/assets\/js\/min\/jquery-1.11.0.min-min.js",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 1,
-		"syntaxCheckerStyle": 1
-		},
-	"\/assets\/js\/main.js": {
-		"fileType": 64,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/js\/main.js",
-		"outputAbbreviatedPath": "\/assets\/js\/min\/main-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
@@ -889,15 +1131,6 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
-		},
-	"\/index.html": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/index.html",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
 		},
 	"\/LICENSE.md": {
 		"enableFootnoteSupport": 0,
