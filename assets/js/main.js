@@ -142,8 +142,6 @@ var farmersMarkets = L.geoJson(null, {
 window.awfulHackCallback = function() {
   theaters.addData(rucsToGeojson(window.awfulHackDataStore, "Restaurants"));
   farmersMarkets.addData(rucsToGeojson(window.awfulHackDataStore, "Farmers Market"));
-
-
 }
 window.awfulHackDynamicApiLoad();
 

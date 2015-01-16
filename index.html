@@ -59,21 +59,18 @@
                   <div class="row">
                     <div class="col-md-3">
                       <img ng-show='place["Type"] === "Farmers Market"' src="assets/img/farm.png" alt="" />
-                      <img ng-show='place["Type"] === "Restaurants"' src="assets/img/rest.png" alt="" />
+                      <img ng-show='place["Type"] === "Restaurant"' src="assets/img/rest.png" alt="" />
                       <img ng-show='place["Type"] === "Grocery Store"' src="assets/img/groceries.png" alt="" />
                     </div>
                     <div class="col-md-9">
-                      <a href="#" class="title"><strong>{{place["Name"]}}</strong></a><br>
+                      <a href="#" class="title" ng-click="jumpMapTo(place)"><strong>{{place["Name"]}}</strong></a><br>
                       <span class="description">{{place["Description"]}}</span><br>
                       <span class="address">{{place["Street Address"] }} <br> {{place["City"] + " " + place["City"] + " " + place["State"] + " " + place["Zip"]}}</span><br>
                       <span class="phone">{{place["Phone"]}}</span>
                     </div>
                   </div>
-
-
                 </li>
             </ul>
-
         </div>
     </div>
 
