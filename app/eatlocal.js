@@ -8,6 +8,7 @@
       map.removeLayer(theaters);
       map.removeLayer(farmersMarkets);
       map.addLayer(layer);
+      layer.openPopup();
     };
 
     if (window.awfulHackDataStore) {
