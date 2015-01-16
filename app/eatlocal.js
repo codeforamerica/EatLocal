@@ -7,7 +7,20 @@
     var activateLayer = function(layer) {
       map.removeLayer(theaters);
       map.removeLayer(farmersMarkets);
+      map.removeLayer(csas);
+      map.removeLayer(wineries);
+      map.removeLayer(agritourism);
       map.addLayer(layer);
+    },
+    activatePopup = function(layer, place) {
+      var pins = layer.getLayers(),
+        pinCount = pins.length;
+      for (var i = 0; i < pinCount; i++) {
+        if (pins[i].getLatLng().lat === place.Longitude
+          && pins[i].getLatLng().lng === place.Latitude) {
+          pins[i].openPopup();
+        }
+      }
     };
 
     if (window.awfulHackDataStore) {
@@ -33,13 +46,21 @@
           case 'Farmers Market':
             layer = farmersMarkets;
             break;
+          case 'CSA':
+            layer = csas;
+            break;
+          case 'Winery':
+            layer = wineries;
+            break;
+          case 'Agritourism':
+            layer = agritourism;
+            break;
           default:
             layer = theaters;
         }
-        console.log(layer);
         map.setView(L.latLng(place.Longitude, place.Latitude));
         activateLayer(layer);
-        layer.openPopup();
+        activatePopup(layer, place);
       } else {
         alert('Sorry. We are uncertain where this place is on the map.');
       }
