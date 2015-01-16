@@ -564,6 +564,39 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/assets\/img\/agritourism-kids.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 473554,
+		"inputAbbreviatedPath": "\/assets\/img\/agritourism-kids.png",
+		"outputAbbreviatedPath": "\/assets\/img\/agritourism-kids.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/agriturism.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 181253,
+		"inputAbbreviatedPath": "\/assets\/img\/agriturism.png",
+		"outputAbbreviatedPath": "\/assets\/img\/agriturism.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/barn.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 189229,
+		"inputAbbreviatedPath": "\/assets\/img\/barn.png",
+		"outputAbbreviatedPath": "\/assets\/img\/barn.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/assets\/img\/farm.png": {
 		"fileType": 32768,
 		"ignore": 0,
@@ -593,17 +626,6 @@
 		"initialSize": 2628,
 		"inputAbbreviatedPath": "\/assets\/img\/farmersmarkets.png",
 		"outputAbbreviatedPath": "\/assets\/img\/farmersmarkets.png",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"processed": 0
-		},
-	"\/assets\/img\/favicon-152.png": {
-		"fileType": 32768,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"initialSize": 4185,
-		"inputAbbreviatedPath": "\/assets\/img\/favicon-152.png",
-		"outputAbbreviatedPath": "\/assets\/img\/favicon-152.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -927,13 +949,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/Screen Shot 2015-01-14 at 11.04.51 PM.png": {
+	"\/assets\/img\/winery.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 189229,
-		"inputAbbreviatedPath": "\/assets\/img\/Screen Shot 2015-01-14 at 11.04.51 PM.png",
-		"outputAbbreviatedPath": "\/assets\/img\/Screen Shot 2015-01-14 at 11.04.51 PM.png",
+		"initialSize": 1.24998e+06,
+		"inputAbbreviatedPath": "\/assets\/img\/winery.png",
+		"outputAbbreviatedPath": "\/assets\/img\/winery.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -1131,6 +1153,15 @@
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
+		},
+	"\/index.html": {
+		"fileType": 8192,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/index.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
 		},
 	"\/LICENSE.md": {
 		"enableFootnoteSupport": 0,
