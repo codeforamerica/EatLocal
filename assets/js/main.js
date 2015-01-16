@@ -39,7 +39,7 @@ var map,
         pointToLayer: function (feature, latlng) {
           return L.marker(latlng, {
             icon: L.icon({
-              iconUrl: "assets/img/" + type + ".png",
+              iconUrl: "assets/img/pin-" + type + ".png",
               iconSize: [27, 45],
               iconAnchor: [12, 28],
               popupAnchor: [0, -27]
@@ -125,11 +125,11 @@ window.awfulHackDynamicApiLoad();
   }
 
   var overlays = {
-    "<img src='assets/img/restaurants.png' width='27' height='45'>&nbsp;Restaurants": theaters,
-    "<img src='assets/img/farmersmarkets.png' width='27' height='45'>&nbsp;Farmers' Markets": farmersMarkets,
-    "<img src='assets/img/csa.png' width='27' height='45'>&nbsp;CSA": csas,
-    "<img src='assets/img/wineries.png' width='27' height='45'>&nbsp;Wineries": wineries,
-    "<img src='assets/img/agritourism.png' width='27' height='45'>&nbsp;Agritourism": agritourism
+    "<img src='assets/img/pin-restaurants.png' width='27' height='45'>&nbsp;Restaurants": theaters,
+    "<img src='assets/img/pin-farmersmarkets.png' width='27' height='45'>&nbsp;Farmers' Markets": farmersMarkets,
+    "<img src='assets/img/pin-csa.png' width='27' height='45'>&nbsp;CSA": csas,
+    "<img src='assets/img/pin-wineries.png' width='27' height='45'>&nbsp;Wineries": wineries,
+    "<img src='assets/img/pin-agritourism.png' width='27' height='45'>&nbsp;Agritourism": agritourism
   };
 
   var layerControl = L.control.layers(overlays, {
