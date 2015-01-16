@@ -224,7 +224,7 @@ and (max-device-width : 480px) {
   transition:-webkit-transform 200ms ease-out;
 }
 
-.search-icon.flipped{
+.flipped .search-icon{
   -webkit-transform: rotateY(180deg);
 }
 
