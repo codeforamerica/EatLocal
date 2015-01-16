@@ -1,89 +1,77 @@
 var map,
-    // typeFilter - optional string type on which to limit data being transformed and returned
-    // returns a valid geojson given data input from RUCS (not currently aligned to any standard)
-    rucsToGeojson = function(data, typeFilter) {
+  // typeFilter - optional string type on which to limit data being transformed and returned
+  // returns a valid geojson given data input from RUCS (not currently aligned to any standard)
+  rucsToGeojson = function(data, typeFilter) {
     // Transform RUCS data into valid geojson
-      var placeCount = 0,
-        numPlaces = data.length,
-        geoJsonData = {
-          type: 'FeatureCollection',
-          features: []
+    var placeCount = 0,
+      numPlaces = data.length,
+      geoJsonData = {
+        type: 'FeatureCollection',
+        features: []
+      };
+    for (var i = 0; i < numPlaces; i++) {
+      var place = data[i];
+      if (place.Type === typeFilter
+          && typeof place.Latitude === 'number'
+          && typeof place.Longitude === 'number') {
+        geoJsonData.features[placeCount] = {
+          type: 'Feature',
+          id: placeCount,
+          properties: {
+            NAME: place.Name,
+            ADDRESS1: place["Street Address"],
+            CITY: place.City,
+            ZIP: place.Zip,
+            DESCRIPTION: place.Description
+          },
+          geometry: {
+            type: 'Point',
+            coordinates: [place.Latitude, place.Longitude]
+          }
         };
-      for (var i = 0; i < numPlaces; i++) {
-        var place = data[i];
-        if (place.Type === typeFilter
-            && typeof place.Latitude === 'number'
-            && typeof place.Longitude === 'number') {
-          geoJsonData.features[placeCount] = {
-            type: 'Feature',
-            id: placeCount,
-            properties: {
-              NAME: place.Name,
-              ADDRESS1: place["Street Address"],
-              CITY: place.City,
-              ZIP: place.Zip,
-              DESCRIPTION: place.Description
-            },
-            geometry: {
-              type: 'Point',
-              coordinates: [place.Latitude, place.Longitude]
-            }
-          };
-          placeCount++;
-        }
+        placeCount++;
       }
-      return geoJsonData;
-    },
-    createMarkerGeoJsonLayer = function(type) {
-      return new L.geoJson(null, {
-        pointToLayer: function (feature, latlng) {
-          return L.marker(latlng, {
-            icon: L.icon({
-              iconUrl: "assets/img/pin-" + type + ".png",
-              iconSize: [27, 45],
-              iconAnchor: [12, 28],
-              popupAnchor: [0, -27]
-            }),
-            title: feature.properties.NAME,
-            riseOnHover: true
-          });
-        },
-        onEachFeature: function (feature, layer) {
-          if (feature.properties) {
-            var content = "<div class='row map-popup'><div>"
-              + "<span class='title'><strong>" + feature.properties.NAME + "</strong></span>"
-              + "<br><span class='description'>" + feature.properties.DESCRIPTION + "</span>"
-              + "<br><span class='address'>" + feature.properties.ADDRESS1 + "</span>" + "</div></div>";
-            if (document.body.clientWidth <= 767) {
-              layer.on({
-                click: function (e) {
-                  $("#feature-title").html(feature.properties.NAME);
-                  $("#feature-info").html(content);
-                  $("#featureModal").modal("show");
-                }
-              });
-            } else {
-              layer.bindPopup(content, {
-                maxWidth: "auto",
-                closeButton: false
-              });
-            }
-            var source;
-            switch (type) {
-              case 'farmersmarkets':
-                source = "Museums";
-                break;
-              case 'restaurants':
-                source = "Theaters";
-                break;
-              default:
-                source = "Theaters";
-                break;
-            };
+    }
+    return geoJsonData;
+  },
+  createMarkerGeoJsonLayer = function(type) {
+    return new L.geoJson(null, {
+      pointToLayer: function (feature, latlng) {
+        return L.marker(latlng, {
+          icon: L.icon({
+            iconUrl: "assets/img/pin-" + type + ".png",
+            iconSize: [27, 45],
+            iconAnchor: [12, 28],
+            popupAnchor: [0, -27]
+          }),
+          title: feature.properties.NAME,
+          riseOnHover: true
+        });
+      },
+      onEachFeature: function (feature, layer) {
+        if (feature.properties) {
+          var content = "<div class='row map-popup'><div>"
+            + "<span class='title'><strong>" + feature.properties.NAME + "</strong></span>"
+            + "<br><span class='description'>" + feature.properties.DESCRIPTION + "</span>"
+            + "<br><span class='address'>" + feature.properties.ADDRESS1 + "</span>" + "</div></div>";
+          if (document.body.clientWidth <= 767) {
+            layer.on({
+              click: function (e) {
+                $("#feature-title").html(feature.properties.NAME);
+                $("#feature-info").html(content);
+                $("#featureModal").modal("show");
+              }
+            });
+          } else {
+            layer.bindPopup(content, {
+              maxWidth: "auto",
+              closeButton: false
+            });
           }
         }
-      });
-    };
+      }
+    });
+  };
 
 /* Basemap Layers */
 var mapquestOSM = L.tileLayer("http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png", {
@@ -94,16 +82,16 @@ var mapquestOSM = L.tileLayer("http://{s}.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.
 
 /* Overlay Layers */
 var farmersMarkets = createMarkerGeoJsonLayer('farmersmarkets');
-var theaters = createMarkerGeoJsonLayer('restaurants');
+var restaurants = createMarkerGeoJsonLayer('restaurants');
 var csas = createMarkerGeoJsonLayer('csa');
 var wineries = createMarkerGeoJsonLayer('wineries');
 var agritourism = createMarkerGeoJsonLayer('agritourism');
 $.getJSON("data/LocalFoodPlaces.json", function (data) {
-  theaters.addData(rucsToGeojson(data, "Restaurants"));
+  restaurants.addData(rucsToGeojson(data, "Restaurants"));
 });/**/
 
 window.awfulHackCallback = function() {
-  theaters.addData(rucsToGeojson(window.awfulHackDataStore, "Restaurants"));
+  restaurants.addData(rucsToGeojson(window.awfulHackDataStore, "Restaurants"));
   farmersMarkets.addData(rucsToGeojson(window.awfulHackDataStore, "Farmers Market"));
   csas.addData(rucsToGeojson(window.awfulHackDataStore, "CSA"));
   wineries.addData(rucsToGeojson(window.awfulHackDataStore, "Winery"));
@@ -114,7 +102,7 @@ window.awfulHackDynamicApiLoad();
   map = L.map("map", {
     zoom: 15,
     center: [38.5750753, -121.4844454],
-    layers: [mapquestOSM, theaters]
+    layers: [mapquestOSM, restaurants]
   });
 
   /* Larger screens get expanded layer control */
@@ -125,19 +113,13 @@ window.awfulHackDynamicApiLoad();
   }
 
   var overlays = {
-    "<img src='assets/img/pin-restaurants.png' width='27' height='45'>&nbsp;Restaurants": theaters,
-    "<img src='assets/img/pin-farmersmarkets.png' width='27' height='45'>&nbsp;Farmers' Markets": farmersMarkets,
-    "<img src='assets/img/pin-csa.png' width='27' height='45'>&nbsp;CSA": csas,
-    "<img src='assets/img/pin-wineries.png' width='27' height='45'>&nbsp;Wineries": wineries,
-    "<img src='assets/img/pin-agritourism.png' width='27' height='45'>&nbsp;Agritourism": agritourism
-  };
-
-  var layerControl = L.control.layers(overlays, {
-  //  collapsed: isCollapsed
-  }).addTo(map);
-
-  /* Add overlay layers to map after defining layer control to preserver order */
-
+      "<img src='assets/img/pin-restaurants.png' width='27' height='45'>&nbsp;Restaurants": restaurants,
+      "<img src='assets/img/pin-farmersmarkets.png' width='27' height='45'>&nbsp;Farmers' Markets": farmersMarkets,
+      "<img src='assets/img/pin-csa.png' width='27' height='45'>&nbsp;CSA": csas,
+      "<img src='assets/img/pin-wineries.png' width='27' height='45'>&nbsp;Wineries": wineries,
+      "<img src='assets/img/pin-agritourism.png' width='27' height='45'>&nbsp;Agritourism": agritourism
+    },
+    layerControl = L.control.layers(overlays).addTo(map);
 
   var sidebar = L.control.sidebar("sidebar", {
     closeButton: true,
@@ -151,11 +133,7 @@ window.awfulHackDynamicApiLoad();
 
   /* Typeahead search functionality */
   $(document).one("ajaxStop", function () {
-
     $("#loading").hide();
-
-
-
     /* instantiate the typeahead UI */
     $("#searchbox").on("typeahead:opened", function () {
       $(".navbar-collapse.in").css("max-height", $(document).height() - $(".navbar-header").height());

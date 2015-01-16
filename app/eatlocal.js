@@ -5,7 +5,7 @@
 
   app.controller('MainCtrl', function($scope){
     var activateLayer = function(layer) {
-      map.removeLayer(theaters);
+      map.removeLayer(restaurants);
       map.removeLayer(farmersMarkets);
       map.removeLayer(csas);
       map.removeLayer(wineries);
@@ -41,7 +41,7 @@
         var layer;
         switch (place.Type) {
           case 'Restaurant':
-            layer = theaters;
+            layer = restaurants;
             break;
           case 'Farmers Market':
             layer = farmersMarkets;
@@ -56,7 +56,7 @@
             layer = agritourism;
             break;
           default:
-            layer = theaters;
+            layer = restaurants;
         }
         map.setView(L.latLng(place.Longitude, place.Latitude));
         activateLayer(layer);
