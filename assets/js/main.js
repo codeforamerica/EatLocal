@@ -86,70 +86,69 @@ var restaurants = createMarkerGeoJsonLayer('restaurants');
 var csas = createMarkerGeoJsonLayer('csa');
 var wineries = createMarkerGeoJsonLayer('wineries');
 var agritourism = createMarkerGeoJsonLayer('agritourism');
-$.getJSON("data/LocalFoodPlaces.json", function (data) {
-  restaurants.addData(rucsToGeojson(data, "Restaurants"));
-});/**/
-
 window.awfulHackCallback = function() {
-  restaurants.addData(rucsToGeojson(window.awfulHackDataStore, "Restaurants"));
+  restaurants.addData(rucsToGeojson(window.awfulHackDataStore, "Restaurant"));
   farmersMarkets.addData(rucsToGeojson(window.awfulHackDataStore, "Farmers Market"));
   csas.addData(rucsToGeojson(window.awfulHackDataStore, "CSA"));
   wineries.addData(rucsToGeojson(window.awfulHackDataStore, "Winery"));
   agritourism.addData(rucsToGeojson(window.awfulHackDataStore, "Agritourism"));
+
+  // TODO: figure out why this is necessary
+  document.getElementById('loading').style.display = 'none';
 }
 window.awfulHackDynamicApiLoad();
 
-  map = L.map("map", {
-    zoom: 15,
-    center: [38.5750753, -121.4844454],
-    layers: [mapquestOSM, restaurants]
+map = L.map("map", {
+  zoom: 15,
+  center: [38.5750753, -121.4844454],
+  layers: [mapquestOSM, restaurants]
+});
+
+var overlays = {
+    "<img src='assets/img/pin-restaurants.png' width='27' height='45'>&nbsp;Restaurants": restaurants,
+    "<img src='assets/img/pin-farmersmarkets.png' width='27' height='45'>&nbsp;Farmers' Markets": farmersMarkets,
+    "<img src='assets/img/pin-csa.png' width='27' height='45'>&nbsp;CSA": csas,
+    "<img src='assets/img/pin-wineries.png' width='27' height='45'>&nbsp;Wineries": wineries,
+    "<img src='assets/img/pin-agritourism.png' width='27' height='45'>&nbsp;Agritourism": agritourism
+  },
+  layerControl = L.control.layers(overlays).addTo(map);
+
+var sidebar = L.control.sidebar("sidebar", {
+  closeButton: true,
+  position: "left"
+}).addTo(map);
+
+/* Highlight search box text on click */
+$("#searchbox").click(function () {
+  $(this).select();
+});
+
+/* Typeahead search functionality */
+$(document).one("ajaxStop", function () {
+  $("#loading").hide();
+  /* instantiate the typeahead UI */
+  $("#searchbox").on("typeahead:opened", function () {
+    $(".navbar-collapse.in").css("max-height", $(document).height() - $(".navbar-header").height());
+    $(".navbar-collapse.in").css("height", $(document).height() - $(".navbar-header").height());
+  }).on("typeahead:closed", function () {
+    $(".navbar-collapse.in").css("max-height", "");
+    $(".navbar-collapse.in").css("height", "");
   });
+  $(".twitter-typeahead").css("position", "static");
+  $(".twitter-typeahead").css("display", "block");
+});
 
-  var overlays = {
-      "<img src='assets/img/pin-restaurants.png' width='27' height='45'>&nbsp;Restaurants": restaurants,
-      "<img src='assets/img/pin-farmersmarkets.png' width='27' height='45'>&nbsp;Farmers' Markets": farmersMarkets,
-      "<img src='assets/img/pin-csa.png' width='27' height='45'>&nbsp;CSA": csas,
-      "<img src='assets/img/pin-wineries.png' width='27' height='45'>&nbsp;Wineries": wineries,
-      "<img src='assets/img/pin-agritourism.png' width='27' height='45'>&nbsp;Agritourism": agritourism
-    },
-    layerControl = L.control.layers(overlays).addTo(map);
-
-  var sidebar = L.control.sidebar("sidebar", {
-    closeButton: true,
-    position: "left"
-  }).addTo(map);
-
-  /* Highlight search box text on click */
-  $("#searchbox").click(function () {
-    $(this).select();
+/* Placeholder hack for IE */
+if (navigator.appName == "Microsoft Internet Explorer") {
+  $("input").each(function () {
+    if ($(this).val() === "" && $(this).attr("placeholder") !== "") {
+      $(this).val($(this).attr("placeholder"));
+      $(this).focus(function () {
+        if ($(this).val() === $(this).attr("placeholder")) $(this).val("");
+      });
+      $(this).blur(function () {
+        if ($(this).val() === "") $(this).val($(this).attr("placeholder"));
+      });
+    }
   });
-
-  /* Typeahead search functionality */
-  $(document).one("ajaxStop", function () {
-    $("#loading").hide();
-    /* instantiate the typeahead UI */
-    $("#searchbox").on("typeahead:opened", function () {
-      $(".navbar-collapse.in").css("max-height", $(document).height() - $(".navbar-header").height());
-      $(".navbar-collapse.in").css("height", $(document).height() - $(".navbar-header").height());
-    }).on("typeahead:closed", function () {
-      $(".navbar-collapse.in").css("max-height", "");
-      $(".navbar-collapse.in").css("height", "");
-    });
-    $(".twitter-typeahead").css("position", "static");
-    $(".twitter-typeahead").css("display", "block");
-  });
-
-  /* Placeholder hack for IE */
-  if (navigator.appName == "Microsoft Internet Explorer") {
-    $("input").each(function () {
-      if ($(this).val() === "" && $(this).attr("placeholder") !== "") {
-        $(this).val($(this).attr("placeholder"));
-        $(this).focus(function () {
-          if ($(this).val() === $(this).attr("placeholder")) $(this).val("");
-        });
-        $(this).blur(function () {
-          if ($(this).val() === "") $(this).val($(this).attr("placeholder"));
-        });
-      }
-    });
-  }
+}
