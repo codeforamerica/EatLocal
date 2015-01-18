@@ -105,13 +105,6 @@ window.awfulHackDynamicApiLoad();
     layers: [mapquestOSM, restaurants]
   });
 
-  /* Larger screens get expanded layer control */
-  if (document.body.clientWidth <= 767) {
-    var isCollapsed = true;
-  } else {
-    var isCollapsed = false;
-  }
-
   var overlays = {
       "<img src='assets/img/pin-restaurants.png' width='27' height='45'>&nbsp;Restaurants": restaurants,
       "<img src='assets/img/pin-farmersmarkets.png' width='27' height='45'>&nbsp;Farmers' Markets": farmersMarkets,
